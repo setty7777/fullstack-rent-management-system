@@ -1,0 +1,16 @@
+export const RENT_MESSAGES = {
+  TENANT_MONTH_REQUIRED: "Tenant and month are required",
+  INVALID_NUMERIC: "Invalid numeric values",
+  TENANT_NOT_FOUND: "Tenant not found",
+  RENT_EXISTS: "Rent already exists for this tenant and month",
+  RENT_NOT_FOUND: "Rent entry not found",
+  DUPLICATE_ENTRY: "Another entry already exists for this tenant/month",
+  RENT_CREATED: "Rent entry created successfully",
+  RENT_UPDATED: "Rent entry updated successfully",
+  RENT_DELETED: "Rent entry deleted successfully",
+  FETCH_FAILED: "Failed to fetch rent entries",
+  CREATE_FAILED: "Failed to create rent entry",
+  UPDATE_FAILED: "Failed to update rent entry",
+  DELETE_FAILED: "Failed to delete rent entry",
+  SERVER_ERROR: "Server error",
+};

@@ -1,0 +1,236 @@
+### Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Get Dashboard (Protected Route)
+GET http://localhost:5000/api/auth/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODM2MjUyLCJleHAiOjE3ODQ4Mzk4NTJ9.4MRfIqx4GUayzre5-coOD9js7tEn3Hq1W47RXqjX6pM
+
+### Get All Buildings
+GET http://localhost:5000/api/buildings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODM2MjUyLCJleHAiOjE3ODQ4Mzk4NTJ9.4MRfIqx4GUayzre5-coOD9js7tEn3Hq1W47RXqjX6pM
+
+### Add Building
+POST http://localhost:5000/api/buildings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODM2MjUyLCJleHAiOjE3ODQ4Mzk4NTJ9.4MRfIqx4GUayzre5-coOD9js7tEn3Hq1W47RXqjX6pM
+Content-Type: application/json
+
+{
+"name": "Grand Sunset Apartments",
+"address": "123 Ocean Drive, City Center"
+}
+
+### Update Building
+PUT http://localhost:5000/api/buildings/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODM2MjUyLCJleHAiOjE3ODQ4Mzk4NTJ9.4MRfIqx4GUayzre5-coOD9js7tEn3Hq1W47RXqjX6pM
+Content-Type: application/json
+
+{
+"name": "Grand Sunset Tower",
+"address": "125 Ocean Drive, City Center"
+}
+
+### Delete Building
+DELETE http://localhost:5000/api/buildings/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODM2MjUyLCJleHAiOjE3ODQ4Mzk4NTJ9.4MRfIqx4GUayzre5-coOD9js7tEn3Hq1W47RXqjX6pM
+
+### Get All Floors
+GET http://localhost:5000/api/floors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+
+### Get Floors By Building
+GET http://localhost:5000/api/floors/building/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+
+### Add Floor
+POST http://localhost:5000/api/floors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+Content-Type: application/json
+
+{
+"building_id": 6,
+"floor_number": "First Floor"
+}
+
+### Update Floor
+PUT http://localhost:5000/api/floors/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+Content-Type: application/json
+
+{
+"building_id": 6,
+"floor_number": "Second Floor"
+}
+
+### Delete Floor
+DELETE http://localhost:5000/api/floors/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+
+### Get All Rooms
+GET http://localhost:5000/api/rooms
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+
+### Add Room
+POST http://localhost:5000/api/rooms
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ3NjAzLCJleHAiOjE3ODQ4NTEyMDN9.pwvV5LtyDoQjyj1JF5slVlUN7Xk4W3MpXTuwPW0jV2Y
+Content-Type: application/json
+
+{
+"building_id": 6,
+"floor_id": 6,
+"room_number": "002"
+}
+
+### Update Room
+PUT http://localhost:5000/api/rooms/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+Content-Type: application/json
+
+{
+"building_id": 6,
+"floor_id": 6,
+"room_number": "004"
+}
+
+### Delete Room
+DELETE http://localhost:5000/api/rooms/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQwMDA5LCJleHAiOjE3ODQ4NDM2MDl9.qhcqcuvhold9YwmGLZiAt7h1sek8d4bScWI0lQDygF4
+
+### Get All Tenants
+GET http://localhost:5000/api/tenants
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ3NjAzLCJleHAiOjE3ODQ4NTEyMDN9.pwvV5LtyDoQjyj1JF5slVlUN7Xk4W3MpXTuwPW0jV2Y
+
+### Add Tenant (multipart/form-data with optional file uploads)
+POST http://localhost:5000/api/tenants
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ3NjAzLCJleHAiOjE3ODQ4NTEyMDN9.pwvV5LtyDoQjyj1JF5slVlUN7Xk4W3MpXTuwPW0jV2Y
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "phone": "9876543210",
+  "advance": 5000,
+  "join_date": "2026-07-01",
+  "building_id": 6,
+  "floor_id": 6,
+  "room_id": 11
+}
+
+### Update Tenant
+PUT http://localhost:5000/api/tenants/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ4MzcxLCJleHAiOjE3ODQ4NTE5NzF9.y2-aIIMR0cMPKLlvO-cJeeXJ9oxlUDFVRPsxMkFA7CM
+Content-Type: application/json
+
+{
+"name": "John Smith",
+"phone": "9876543210",
+"advance": 6000,
+"building_id": 6,
+"floor_id": 6,
+"room_id": 11
+}
+
+### Delete Tenant
+DELETE http://localhost:5000/api/tenants/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ4MzcxLCJleHAiOjE3ODQ4NTE5NzF9.y2-aIIMR0cMPKLlvO-cJeeXJ9oxlUDFVRPsxMkFA7CM
+
+### Get All Rent Entries
+GET http://localhost:5000/api/rent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ5MzY2LCJleHAiOjE3ODQ4NTI5NjZ9.mdo3O2ajZ6BgciV_4qWk09jFKh7Jp3ipSoqhtpA3vz4
+
+### Create Rent Entry
+POST http://localhost:5000/api/rent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ5MzY2LCJleHAiOjE3ODQ4NTI5NjZ9.mdo3O2ajZ6BgciV_4qWk09jFKh7Jp3ipSoqhtpA3vz4
+Content-Type: application/json
+
+{
+"tenant_id": 7,
+"month": "2026-07",
+"rent": 10000,
+"water": 500,
+"maintenance": 300,
+"electricity": 1200,
+"previous_due": 0,
+"total": 12000,
+"paid": 12000,
+"advance": 0,
+"due": 0,
+"status": "not vacated"
+}
+
+### Update Rent Entry
+PUT http://localhost:5000/api/rent/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ5MzY2LCJleHAiOjE3ODQ4NTI5NjZ9.mdo3O2ajZ6BgciV_4qWk09jFKh7Jp3ipSoqhtpA3vz4
+Content-Type: application/json
+
+{
+"tenant_id": 7,
+"month": "2026-07",
+"rent": 10000,
+"water": 500,
+"maintenance": 300,
+"electricity": 1200,
+"previous_due": 0,
+"total": 12000,
+"paid": 10000,
+"advance": 0,
+"due": 2000,
+"status": "not vacated"
+}
+
+### Delete Rent Entry
+DELETE http://localhost:5000/api/rent/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODQ5MzY2LCJleHAiOjE3ODQ4NTI5NjZ9.mdo3O2ajZ6BgciV_4qWk09jFKh7Jp3ipSoqhtpA3vz4
+
+### Get All Bills
+GET http://localhost:5000/api/bills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODUyMDI1LCJleHAiOjE3ODQ4NTU2MjV9.HFhFHS8-_JlC9G6DmA6nLoWRZzVGiaXkDjOQ6mCTD1A
+
+### Get Last Bill of Tenant
+GET http://localhost:5000/api/bills/last?tenantId=7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODUyMDI1LCJleHAiOjE3ODQ4NTU2MjV9.HFhFHS8-_JlC9G6DmA6nLoWRZzVGiaXkDjOQ6mCTD1A
+
+### Create Bill
+POST http://localhost:5000/api/bills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODUyMDI1LCJleHAiOjE3ODQ4NTU2MjV9.HFhFHS8-_JlC9G6DmA6nLoWRZzVGiaXkDjOQ6mCTD1A
+Content-Type: application/json
+
+{
+"tenant_id": 7,
+"previous_reading": 1709,
+"current_reading": 2000,
+"rate": 7.5,
+"month": "July",
+"year": 2026
+}
+
+### Update Bill
+PUT http://localhost:5000/api/bills/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODUyMDI1LCJleHAiOjE3ODQ4NTU2MjV9.HFhFHS8-_JlC9G6DmA6nLoWRZzVGiaXkDjOQ6mCTD1A
+Content-Type: application/json
+
+{
+"tenant_id": 7,
+"previous_reading": 1700,
+"current_reading": 2260,
+"rate": 7.5,
+"month": "July",
+"year": 2026
+}
+
+### Delete Bill
+DELETE http://localhost:5000/api/bills/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzg0ODUyMDI1LCJleHAiOjE3ODQ4NTU2MjV9.HFhFHS8-_JlC9G6DmA6nLoWRZzVGiaXkDjOQ6mCTD1A

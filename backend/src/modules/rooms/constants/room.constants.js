@@ -1,0 +1,17 @@
+export const ROOM_MESSAGES = {
+  ROOM_DETAILS_REQUIRED: "Building, floor and room number are required",
+  BUILDING_NOT_FOUND: "Building not found",
+  FLOOR_NOT_FOUND: "Floor not found",
+  BUILDING_FLOOR_NOT_FOUND: "Building or floor not found",
+  FLOOR_MISMATCH: "Selected floor does not belong to this building",
+  ROOM_NOT_FOUND: "Room not found",
+  ROOM_ADDED: "Room added successfully",
+  ROOM_UPDATED: "Room updated successfully",
+  ROOM_DELETED: "Room deleted successfully",
+  FETCH_FAILED: "Failed to fetch rooms",
+  ADD_FAILED: "Failed to add room",
+  UPDATE_FAILED: "Failed to update room",
+  DELETE_FAILED: "Failed to delete room",
+  ROOM_EXISTS: "Room already exists on this floor",
+  SERVER_ERROR: "Server error",
+};

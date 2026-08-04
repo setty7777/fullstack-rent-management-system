@@ -1,0 +1,18 @@
+export const BILL_MESSAGES = {
+  REQUIRED_FIELDS_MISSING: "Required fields missing",
+  INVALID_NUMERIC: "Invalid numeric values",
+  CURRENT_READING_INVALID: "Current reading must be greater than previous reading",
+  BILL_EXISTS: "Bill already exists for this tenant, month and year",
+  BILL_NOT_FOUND: "Bill not found",
+  DUPLICATE_BILL: "Another bill already exists for this tenant/month/year",
+  TENANT_ID_REQUIRED: "tenantId is required",
+  BILL_CREATED: "Bill created successfully",
+  BILL_UPDATED: "Bill updated successfully",
+  BILL_DELETED: "Bill deleted successfully",
+  FETCH_FAILED: "Failed to fetch bills",
+  CREATE_FAILED: "Failed to create bill",
+  UPDATE_FAILED: "Failed to update bill",
+  DELETE_FAILED: "Failed to delete bill",
+  FETCH_LAST_FAILED: "Failed to fetch last bill",
+  SERVER_ERROR: "Server error",
+};

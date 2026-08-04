@@ -1,0 +1,15 @@
+export const BUILDING_MESSAGES = {
+  NAME_ADDRESS_REQUIRED: "Name and address are required",
+  BUILDING_NOT_FOUND: "Building not found",
+  BUILDING_ADDED: "Building added successfully",
+  BUILDING_UPDATED: "Building updated successfully",
+  BUILDING_DELETED: "Building deleted successfully",
+  FETCH_FAILED: "Failed to fetch buildings",
+  ADD_FAILED: "Failed to add building",
+  UPDATE_FAILED: "Failed to update building",
+  DELETE_FAILED: "Failed to delete building",
+  NAME_EXISTS: "Building name already exists",
+  ADDRESS_EXISTS: "Address already exists",
+  DUPLICATE_ENTRY: "Duplicate entry",
+  SERVER_ERROR: "Server error",
+};
